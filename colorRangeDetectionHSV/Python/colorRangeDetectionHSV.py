@@ -1,5 +1,4 @@
 import cv2
-import cv2 as cv
 import numpy as np
 
 kernel = np.ones((5,5),np.uint8)
