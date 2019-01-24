@@ -1,8 +1,8 @@
 import pyautogui
-##import cv2
+#import cv2
 import numpy as np
-from PIL import Image
 import time
+
 ##
 ##sum = [ 0, 0, 0];
 ##fileName = "1.png";
@@ -93,16 +93,16 @@ while (1):
     print(x,y,h,w)
     crop_img = screenshot[y:y+h, x:x+w]
     screenshot = crop_img
-    dominantColor = get_dominant_color(screenshot, k=4 )
+    dominantColor = get_dominant_color(screenshot, k=2 )
     print(dominantColor)
     img = create_blank(maxX,maxY,( int(dominantColor[2]),int(dominantColor[1]),int(dominantColor[0]) ))
-    #cv2.imshow('DominantColor',img)
+    cv2.imshow('DominantColor',img)
     #cv2.imshow('cropScreenshot',crop_img)
 
-    #cv2.imshow('screenshot',screenshot)
-    #key = cv2.waitKey(2) & 0xFF
-    #if key == ord("q"):
-       # break
-    time.sleep(10)
+    cv2.imshow('screenshot',screenshot)
+    key = cv2.waitKey(2) & 0xFF
+    if key == ord("q"):
+       break
+    #time.sleep(10)
     
 cv2.destroyAllWindows()     
