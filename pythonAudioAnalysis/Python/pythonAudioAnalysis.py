@@ -13,7 +13,7 @@ while ( 1 ) :
    
     data = np.fromstring(stream.read(CHUNK),dtype=np.int16)
     peak=np.average(np.abs(data))*10
-    bars="#"*int(50*peak/2**16)
+    bars="#"*int(100*peak/2**16)
     #print("%04d %05d %s"%(i,peak,bars))
     print(bars)
     print(len(bars))

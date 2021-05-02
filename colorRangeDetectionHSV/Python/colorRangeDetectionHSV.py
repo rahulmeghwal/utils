@@ -99,4 +99,3 @@ cap.release()
 
 cv2.destroyAllWindows()
 
-#https://www.facebook.com/mrlunk
